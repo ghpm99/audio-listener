@@ -7,7 +7,7 @@ p = pyaudio.PyAudio()
 device_target_name_output = 'Tempest  34\' (NVIDIA High Definition Audio)'
 device_target_output = None
 
-CHUNK = 8
+CHUNK = 1600
 FORMAT = pyaudio.paInt16
 CHANNELS = 2
 RATE = 44100

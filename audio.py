@@ -7,7 +7,7 @@ p = pyaudio.PyAudio()
 device_target_name = 'Mixagem loopback'
 device_target = None
 
-CHUNK = 8
+CHUNK = 1600
 FORMAT = pyaudio.paInt16
 CHANNELS = 2
 RATE = 44100

@@ -9,8 +9,8 @@ device_target_output = None
 
 CHUNK = 1600
 FORMAT = pyaudio.paInt16
-CHANNELS = 2
-RATE = 44100
+CHANNELS = 1
+RATE = 16000
 RECORD_SECONDS = 5
 WAVE_OUTPUT_FILENAME = "output.wav"
 

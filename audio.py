@@ -9,8 +9,8 @@ device_target = None
 
 CHUNK = 1600
 FORMAT = pyaudio.paInt16
-CHANNELS = 2
-RATE = 44100
+CHANNELS = 1
+RATE = 16000
 RECORD_SECONDS = 5
 uri = "ws://192.168.100.12:8765"
 

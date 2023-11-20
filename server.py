@@ -21,7 +21,6 @@ async def listener_audio(websocket):
         channels=CHANNELS,
         rate=RATE,
         output=True,
-        output_device_index=5,
         frames_per_buffer=CHUNK,
     )
     for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
@@ -30,12 +29,12 @@ async def listener_audio(websocket):
 
     stream_output.stop_stream()
     stream_output.close()
-    p.terminate()
 
 
 async def main():
     async with websockets.serve(listener_audio, "localhost", 8765):
         await asyncio.Future()  # run forever
+        p.terminate()
 
 if __name__ == "__main__":
     asyncio.run(main())

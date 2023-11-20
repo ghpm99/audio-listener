@@ -10,7 +10,7 @@ device_target = None
 CHUNK = 1600
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
-RATE = 16000
+RATE = 44100
 RECORD_SECONDS = 5
 uri = "ws://192.168.100.12:8765"
 
@@ -26,7 +26,7 @@ async def send_audio():
     print("* recording")
     async with websockets.connect(uri) as websocket:
         while True:
-            data = stream_input.read(CHUNK)
+            data = stream_input.read(CHUNK * 2)
             await websocket.send(data)
 
     stream_input.stop_stream()
